@@ -5,4 +5,5 @@ export interface AuthReqProps {
 
 export interface AuthRegisterProps extends AuthReqProps {
   adminCode: string;
+  name: string;
 }
