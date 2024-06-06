@@ -1,18 +1,19 @@
 import { Request, Response } from 'express';
-import {
-  AuthRegisterProps,
-  AuthReqProps,
-} from '../Types/Requests/UserRequests';
 import SendResponse from '../utils/SendResponse';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
+import {
+  AuthReqProps,
+  AuthRegisterProps,
+} from '../Types/Requests/IUserRequests';
+import UserModel from '../model/UserModel';
 
+const userModel = new UserModel();
 export class UserController {
   async auth(req: Request<unknown, unknown, AuthReqProps>, res: Response) {
     try {
       const { email, password } = req.body;
 
-      //TODO - USER SERVICE
       const user = await { id: 1234, name: 'Ali', password: '552' };
 
       if (!user) {
@@ -44,7 +45,7 @@ export class UserController {
     res: Response
   ) {
     try {
-      const { adminCode, email, password } = req.body;
+      const { adminCode, email, password, name } = req.body;
 
       if (!adminCode || !email || !password) {
         return SendResponse.error(
@@ -53,9 +54,23 @@ export class UserController {
           'Campos obrigatórios sem preenchimento'
         );
       }
+
+      const saltRounds = 10;
+      const salt = bcrypt.genSaltSync(saltRounds);
+      const hashedPassword = bcrypt.hashSync(password, salt);
     } catch (error) {
       console.log('🚀 ~ UserController ~ auth ~ error:', error);
       return SendResponse.error(res, 500, 'Erro ao cadastrar usuário');
     }
+  }
+
+  async update() {
+    try {
+    } catch (error) {}
+  }
+
+  async delete() {
+    try {
+    } catch (error) {}
   }
 }
