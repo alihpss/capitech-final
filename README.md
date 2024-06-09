@@ -14,9 +14,8 @@
 <span id="sobre">
 
 ## :bookmark_tabs: Sobre o projeto
-
-O projeto consiste na elaboração de um site voltado para a **educação**, com o objetivo de fornecer
-ensino gratuito e de qualidade para pessoas que tem interesse em ingressar nas áreas de
+O projeto consiste na elaboração de um site voltado para a **educação**, com o objetivo de fornecer 
+ensino gratuito e de qualidade para pessoas que tem interesse em ingressar nas áreas de 
 **tecnologia** (mais especificamente no nicho de desenvolvimento).
 
 > _Projeto baseado na metodologia ágil SCRUM_
@@ -24,25 +23,21 @@ ensino gratuito e de qualidade para pessoas que tem interesse em ingressar nas �
 :pushpin: Status do Projeto: **Concluído** :heavy_check_mark:
 
 ### 🏁 Entregas de Sprints
-
 Cada entrega foi realizada a partir de cards no Trello, prints das tasks:
 | Sprint | Previsão | Status | Histórico |
 |:--:|:----------:|:----------------|:-------------------------------------------------:|
-| 01 | 00/00/2024 | ✔️ Concluída | [ver relatório]() |
-| 02 | 00/00/2024 | ✔️ Concluída | [ver relatório]() |
-| 03 | 00/00/2024 | ✔️ Concluída | [ver relatório]() |
+| 01 | 00/00/2024 | ✔️ Concluída    | [ver relatório](linkTrello) |
+| 02 | 00/00/2024 | ✔️ Concluída    | [ver relatório](linkTrello) |
+| 03 | 00/00/2024 | ✔️ Concluída    | [ver relatório](inkTrello) |
 
 ### :clapper: Apresentação Final
-
 Funcionalidades para cada tipo de usuário do sistema:
-
 <details>
    <summary>Usuário comum</summary>
     <div align="center">
         <img src="">
     </div>
 </details
-
 <details>
    <summary>Usuário administrador</summary>
     <div align="center">
@@ -55,12 +50,12 @@ Funcionalidades para cada tipo de usuário do sistema:
 <span id="backlogs">
 
 ## :dart: Backlogs & User Stories
-
+    
 <div align="center">
     
-![ requisitos funcionais]()
-![requisitos  não funcionais]()
-![user stories]()
+![ requisitos funcionais](ParteDoDoc)
+![requisitos  não funcionais](ParteDoDoc)
+![user stories](ParteDoDoc)
 </div>
   
 → [Voltar ao topo](#topo)
@@ -69,16 +64,14 @@ Funcionalidades para cada tipo de usuário do sistema:
 
 ## :desktop_computer: Protótipo & Documentação
 
+    
 > 🔗 **Links gerais** <br>
->
-> - Documentação do software: [clique aqui para acessar]()
-> - Manual do usuário: [clique aqui para acessar]()
+> - Documentação do software: [clique aqui para acessar](LinkDoDoc)
+> - Navegação Pelo Site: [clique aqui para acessar]()
 > - Links para os repositórios criados:
->   - **Frontend:** [acessar help-duck-web]()
->   - **Microsserviços (backend):**
+>    - **Frontend:** [acessar]()
+>    - **Backend** [acessar]()
 
-> - Documentações das APIs:
->   - **Microsserviço de usuários e equipamentos:** [acessar ]()
 
 → [Voltar ao topo](#topo)
 
@@ -107,12 +100,16 @@ As seguintes ferramentas, linguagens, bibliotecas e tecnologias foram usadas na 
 
 ## :busts_in_silhouette: Equipe
 
-|    Função     | Nome                      |                                                                                                                                                             LinkedIn & GitHub                                                                                                                                                              |
-| :-----------: | :------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| Product Owner | Alexsander Ramos Ferreira |                [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://br.linkedin.com/in/alexsanderferreira) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/LehRamos1508)                 |
-| Scrum Master  | João Cunha Fischer        |            [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://br.linkedin.com/in/joao-cunha-fischer-6585b1203) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/FischerJoao)            |
-| Desenvolvedor | Joel de Farias Neto       | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://br.linkedin.com/in/joel-alves-neto?trk=public_profile_browsemap-profile) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Joel-Neto) |
-| Desenvolvedor | Ali Haidar                |                        [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://br.linkedin.com/in/ali-hps) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/alihpss)                         |
-|    Design     | Claúdio Vinicius          |          [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://br.linkedin.com/in/claudio-vinicius-camellin-almeida) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Clouddios)           |
+|    Função     | Nome                                  |                                                                                                                                                      LinkedIn & GitHub                                                                                                                                                      |
+| :-----------: | :------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Product Owner | Alexsander Ramos Ferreira           |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://br.linkedin.com/in/alexsanderferreira) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/LehRamos1508)              |
+| Scrum Master  | João Cunha Fischer |      [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://br.linkedin.com/in/joao-cunha-fischer-6585b1203) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/FischerJoao)     |
+|   Desenvolvedor   | Joel de Farias Neto              |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://br.linkedin.com/in/joel-alves-neto?trk=public_profile_browsemap-profile) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Joel-Neto)        |
+|   Desenvolvedor    | Ali Haidar                  |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://br.linkedin.com/in/ali-hps) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/alihpss)        |
+|   Design    | Claúdio Viniciús                 |   [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://br.linkedin.com/in/claudio-vinicius-camellin-almeida) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Clouddios)   |
 
 → [Voltar ao topo](#topo)
+
+
+
+
