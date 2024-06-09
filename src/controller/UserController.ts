@@ -2,7 +2,6 @@ import { Request, Response } from 'express';
 import {
   AuthRegisterProps,
   AuthReqProps,
-  IdProps,
   UpdateUserProps,
 } from '../Types/Requests/UserRequests';
 import SendResponse from '../utils/SendResponse';
@@ -84,7 +83,7 @@ export class UserController {
     }
   }
 
-  async delete(req: Request<IdProps, unknown, unknown>, res: Response) {
+  async delete(req: Request<{ id: string }, unknown, unknown>, res: Response) {
     try {
       const { id } = req.params;
 
@@ -103,7 +102,10 @@ export class UserController {
     }
   }
 
-  async update(req: Request<IdProps, unknown, UpdateUserProps>, res: Response) {
+  async update(
+    req: Request<{ id: string }, unknown, UpdateUserProps>,
+    res: Response
+  ) {
     try {
       const { id } = req.params;
 

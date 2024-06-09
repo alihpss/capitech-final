@@ -3,7 +3,6 @@ import SendResponse from '../utils/SendResponse';
 import { Trail } from '../models/Trail';
 import {
   CreateAndUpdateTrailProps,
-  IdProps,
   LimitAndPageProps,
 } from '../Types/Requests/TrailRequests';
 
@@ -25,7 +24,7 @@ export class TrailController {
     }
   }
 
-  async getOne(req: Request<IdProps, unknown, unknown>, res: Response) {
+  async getOne(req: Request<{ id: string }, unknown, unknown>, res: Response) {
     try {
       const { id } = req.params;
 
@@ -74,7 +73,7 @@ export class TrailController {
   }
 
   async update(
-    req: Request<IdProps, unknown, CreateAndUpdateTrailProps>,
+    req: Request<{ id: string }, unknown, CreateAndUpdateTrailProps>,
     res: Response
   ) {
     try {
@@ -98,7 +97,7 @@ export class TrailController {
     }
   }
 
-  async delete(req: Request<IdProps, unknown, unknown>, res: Response) {
+  async delete(req: Request<{ id: string }, unknown, unknown>, res: Response) {
     try {
       const { id } = req.params;
 
