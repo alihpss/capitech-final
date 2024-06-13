@@ -9,6 +9,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 import { User } from '../models/User';
+import { LimitAndPageProps } from '../Types/Requests/TrailRequests';
 
 dotenv.config();
 
@@ -138,6 +139,28 @@ export class UserController {
     } catch (error) {
       console.log('🚀 ~ UserController ~ update ~ error:', error);
       return SendResponse.error(res, 500, 'Erro ao atualizar usuário');
+    }
+  }
+
+  async getAll(
+    req: Request<unknown, unknown, unknown, LimitAndPageProps>,
+    res: Response
+  ) {
+    try {
+      const limit = req.query.limit || 10;
+      const skip = req.query.skip || 0;
+
+      const users = await User.find().limit(limit).skip(skip);
+
+      return SendResponse.success(
+        res,
+        200,
+        'Sucesso ao listar usuários',
+        users
+      );
+    } catch (error) {
+      console.log('🚀 ~ UserController ~ error:', error);
+      SendResponse.error(res, 500, 'Erro ao listar usuários');
     }
   }
 }

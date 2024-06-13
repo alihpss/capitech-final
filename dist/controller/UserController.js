@@ -94,6 +94,18 @@ class UserController {
             return SendResponse_1.default.error(res, 500, 'Erro ao atualizar usuário');
         }
     }
+    async getAll(req, res) {
+        try {
+            const limit = req.query.limit || 10;
+            const skip = req.query.skip || 0;
+            const users = await User_1.User.find().limit(limit).skip(skip);
+            return SendResponse_1.default.success(res, 200, 'Sucesso ao listar usuários', users);
+        }
+        catch (error) {
+            console.log('🚀 ~ UserController ~ error:', error);
+            SendResponse_1.default.error(res, 500, 'Erro ao listar usuários');
+        }
+    }
 }
 exports.UserController = UserController;
 //# sourceMappingURL=UserController.js.map
