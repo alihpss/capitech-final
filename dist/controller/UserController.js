@@ -39,6 +39,9 @@ class UserController {
             if (!adminCode || !email || !password) {
                 return SendResponse_1.default.error(res, 404, 'Campos obrigatórios não preenchidos');
             }
+            if (adminCode !== process.env.ADMIN_CODE) {
+                return SendResponse_1.default.error(res, 400, 'Código de admin incorreto');
+            }
             const userExists = await User_1.User.findOne().where('email').equals(email);
             if (userExists) {
                 return SendResponse_1.default.error(res, 400, 'Usuário com e-mail já cadastrado');

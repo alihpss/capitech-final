@@ -58,6 +58,10 @@ export class UserController {
         );
       }
 
+      if (adminCode !== process.env.ADMIN_CODE) {
+        return SendResponse.error(res, 400, 'Código de admin incorreto');
+      }
+
       const userExists = await User.findOne().where('email').equals(email);
 
       if (userExists) {
