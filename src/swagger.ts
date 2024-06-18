@@ -16,7 +16,12 @@ const options = {
       },
     ],
   },
-  apis: ['./routes/*.ts', './controllers/*.ts'], // Caminho para os arquivos de rotas e controladores
+  apis: [
+    './routes/*.ts',
+    './controllers/*.ts',
+    './routes/*.js',
+    './controllers/*.js',
+  ], // Caminho para os arquivos de rotas e controladores
 };
 
 const specs = swaggerJSDoc(options);
