@@ -31,6 +31,7 @@ const cors_1 = __importDefault(require("cors"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const routes_1 = __importDefault(require("./routes"));
+const swagger_1 = require("./swagger");
 dotenv_1.default.config();
 mongoose_1.default
     .connect(process.env.DB_PATH)
@@ -42,6 +43,7 @@ mongoose_1.default
     app.get('/', (_req, res) => {
         res.status(200).json({ entry: 'API Capitech rodando!' });
     });
+    (0, swagger_1.setupSwagger)(app);
     app.use(routes_1.default);
     app.listen(3000, () => {
         console.log('api rodando em http://localhost:3000');

@@ -3,11 +3,6 @@ import { Schema, model } from 'mongoose';
 export const Trail = model(
   'Trail',
   new Schema({
-    image_path: {
-      type: String,
-      required: false,
-      default: null,
-    },
     description: {
       type: String,
       required: false,

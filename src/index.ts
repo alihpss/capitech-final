@@ -3,6 +3,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import routes from './routes';
+import { setupSwagger } from './swagger';
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ mongoose
       res.status(200).json({ entry: 'API Capitech rodando!' });
     });
 
+    setupSwagger(app);
     app.use(routes);
 
     app.listen(3000, () => {

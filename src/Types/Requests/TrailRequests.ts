@@ -3,7 +3,6 @@ export interface IdProps {
 }
 
 export interface CreateAndUpdateTrailProps {
-  image_path?: string;
   description?: string;
   video_description?: string;
   name?: string;

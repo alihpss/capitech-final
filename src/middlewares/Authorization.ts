@@ -22,7 +22,7 @@ export function ensureAuthenticate(
       return SendResponse.error(res, 401, 'Token inválido!');
     }
 
-    verify(token, secretKey);
+    verify(token!, secretKey);
     return next();
   } catch (err: any) {
     return SendResponse.error(res, 401, 'Token inválido !');
