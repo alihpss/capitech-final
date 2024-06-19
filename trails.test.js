@@ -5,8 +5,8 @@
  * dotenv: Biblioteca para gerenciar variáveis de ambiente
  */
 const request = require('supertest');
-const dotenv = require('dotenv');
-dotenv.config(); //carrega as variáveis do .env
+// const dotenv = require("dotenv");
+// dotenv.config(); //carrega as variáveis do .env
 
 const baseURL = 'https://capitech-back.vercel.app';
 
@@ -19,7 +19,7 @@ describe('API REST de trilhas sem o Token', () => {
   });
 
   it('GET / Obtém trilha pelo ID sem o token', async () => {
-    const id = '665b26163addc3937a831bf4'; // Incluir um ID existente
+    const id = '66723e754c45665580271c31'; // Incluir um ID existente
     const response = await request(baseURL)
       .get(`/trilhas/${id}`)
       .set('Content-Type', 'application/json')
@@ -51,7 +51,7 @@ describe('API REST de trilhas sem o Token', () => {
     references: 'link do video',
   };
   it('PUT - Atualiza uma trilha sem autenticação', async () => {
-    const id = ''; // Incluir um ID existente
+    const id = '66723e754c45665580271c31'; // Incluir um ID existente
     const response = await request(baseURL)
       .put(`/trilhas/${id}`)
       .set('Content-Type', 'application/json')
@@ -60,7 +60,7 @@ describe('API REST de trilhas sem o Token', () => {
   });
 
   it('DELETE - Deleta uma trilha sem autenticação', async () => {
-    const id = ''; // Incluir um ID existente
+    const id = '667348975f006198e17db5a3'; // Incluir um ID existente
     const response = await request(baseURL)
       .delete(`/trilhas/${id}`)
       .set('Content-Type', 'application/json')
@@ -74,7 +74,7 @@ describe('API REST de trilhas com o token', () => {
     const response = await request(baseURL)
       .post('/login')
       .set('Content-Type', 'application/json')
-      .send({ email: 'teste@email.com', senha: 'teste123' })
+      .send({ email: 'teste@email.com', password: 'teste123' })
       .expect(200); //OK
 
     token = response.body.data;
@@ -84,7 +84,7 @@ describe('API REST de trilhas com o token', () => {
   const trail = {
     name: 'JAVASCRIPT',
     subtitle: 'Var, Let e Const',
-    Description: 'Testando método POST com token',
+    description: 'Testando método POST com token',
     video_title: 'Diferença entre Var, Let e Const',
     video_description: 'Diferença entre Var, Let e Const',
     references: 'link do video',
@@ -102,8 +102,8 @@ describe('API REST de trilhas com o token', () => {
     expect(response.body).toHaveProperty('success');
     expect(response.body.success).toBe(true);
 
-    idTrail = response.body.data.__id;
-    expect(response.body.data.__id.length).toBeGreaterThan(0);
+    idTrail = response.body.data._id;
+    expect(response.body.data._id.length).toBeGreaterThan(0);
   });
 
   const updateTrail = {
