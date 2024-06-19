@@ -22,7 +22,8 @@ class UserController {
             if (!passwordMatch) {
                 return SendResponse_1.default.error(res, 400, 'Usuário ou senha incorreta');
             }
-            const { password: userPass, ...restUser } = user;
+            const userObject = user.toObject();
+            const { password: userPass, ...restUser } = userObject;
             const userToken = jsonwebtoken_1.default.sign(restUser, process.env.JWT_SECRET, {
                 expiresIn: '1d',
             });

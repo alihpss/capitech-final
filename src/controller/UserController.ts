@@ -29,8 +29,9 @@ export class UserController {
       if (!passwordMatch) {
         return SendResponse.error(res, 400, 'Usuário ou senha incorreta');
       }
+      const userObject = user.toObject();
 
-      const { password: userPass, ...restUser } = user;
+      const { password: userPass, ...restUser } = userObject;
 
       const userToken = jwt.sign(restUser, process.env.JWT_SECRET!, {
         expiresIn: '1d',
