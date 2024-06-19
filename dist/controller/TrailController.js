@@ -36,9 +36,11 @@ class TrailController {
     async create(req, res) {
         try {
             const data = req.body;
-            const trailExists = await Trail_1.Trail.findOne().where('name').equals(data.name);
+            const trailExists = await Trail_1.Trail.findOne()
+                .where('subtitle')
+                .equals(data.subtitle);
             if (trailExists) {
-                return SendResponse_1.default.error(res, 400, 'Trilha com este nome já cadastrada');
+                return SendResponse_1.default.error(res, 400, 'Trilha com este subtítulo já cadastrada');
             }
             const trail = await Trail_1.Trail.create(data);
             return SendResponse_1.default.success(res, 201, 'Trilha criada com sucesso', trail);

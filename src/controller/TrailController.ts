@@ -53,13 +53,15 @@ export class TrailController {
     try {
       const data = req.body;
 
-      const trailExists = await Trail.findOne().where('name').equals(data.name);
+      const trailExists = await Trail.findOne()
+        .where('subtitle')
+        .equals(data.subtitle);
 
       if (trailExists) {
         return SendResponse.error(
           res,
           400,
-          'Trilha com este nome já cadastrada'
+          'Trilha com este subtítulo já cadastrada'
         );
       }
 
