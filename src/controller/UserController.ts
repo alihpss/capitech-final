@@ -126,6 +126,10 @@ export class UserController {
       let hashedPassword = null;
       let userUpdate = data;
 
+      if (!data.password) {
+        userUpdate.password = userExists.password;
+      }
+
       if (data?.password) {
         const saltRounds = 10;
         const salt = bcrypt.genSaltSync(saltRounds);
