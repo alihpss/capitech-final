@@ -127,7 +127,7 @@ export class UserController {
       let userUpdate = data;
 
       if (!data.password) {
-        userUpdate.password = userExists.password;
+        delete userUpdate.password;
       }
 
       if (data?.password) {
