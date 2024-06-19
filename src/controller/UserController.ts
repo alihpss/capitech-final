@@ -142,7 +142,7 @@ export class UserController {
       return SendResponse.success(
         res,
         200,
-        'Dados do usuário atualizados com sucesso',
+        'Dados do usuário atualizados com sucesso!',
         user
       );
     } catch (error) {

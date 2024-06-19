@@ -94,7 +94,7 @@ class UserController {
                 userUpdate.password = hashedPassword;
             }
             const user = await User_1.User.findByIdAndUpdate(id, userUpdate, { new: true });
-            return SendResponse_1.default.success(res, 200, 'Dados do usuário atualizados com sucesso', user);
+            return SendResponse_1.default.success(res, 200, 'Dados do usuário atualizados com sucesso!', user);
         }
         catch (error) {
             console.log('🚀 ~ UserController ~ update ~ error:', error);
