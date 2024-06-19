@@ -27,6 +27,7 @@ export const Trail = model(
       type: String,
       required: false,
       default: null,
+      unique: true,
     },
     video_title: {
       type: String,

@@ -27,6 +27,7 @@ exports.Trail = (0, mongoose_1.model)('Trail', new mongoose_1.Schema({
         type: String,
         required: false,
         default: null,
+        unique: true,
     },
     video_title: {
         type: String,
